@@ -3,6 +3,7 @@ import Component1 from '../assets/logo.svg'
 import Bell from '../assets/Bell.svg'
 import rectangle from '../assets/rectangle.svg'
 import avatar from '../assets/avatar.png'
+import logout from '../assets/logout_icon.svg'
 import { Link } from 'react-router-dom';
 
 
@@ -28,7 +29,13 @@ function Header() {
                     <div className={style.Header_avatar}>
                         <img src={avatar} alt="avatar" style={{width:"60px", height:"60px", borderRadius:"50px", border:"1px solid white"}} />
                         <div className={style.user_infor}>
-                            this is a dropdown
+                            <p className={style.user_inf}>email.example.hcmut.edu.vn</p>
+                            <p className={style.user_inf} style={{marginBottom:"6px"}}>Nguyễn Thị Văn Tên</p>
+                            <div className={style.infor_line}></div>
+                            <div className={style.logout}>
+                                <p style={{fontSize:"16px", fontWeight:"700", color:"#032B91"}}>Đăng xuất</p>
+                                <img src={logout} className={style.logout_icon}></img>
+                            </div>
                         </div>
                     </div>
                     <div className={style.Header_text}>

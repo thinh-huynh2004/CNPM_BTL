@@ -48,6 +48,49 @@ align-items: center;
 justify-content: center;
 padding-top: 10px;
 }
+.user_infor{
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    height: 100px;
+    width: 230px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid #032B91;
+    display: none;
+}
+.user_inf{
+    color: #032B91;
+    text-align: right;
+    margin-right: 5px;
+    margin-top: 6px;
+}
+.infor_line{
+    width: 100%;
+    height: 2px;
+    background-color: #032B91;
+}
+.logout{
+    display: flex;
+    height: 38px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+.logout_icon{
+    width: 32px;
+    margin-right: 5px;
+}
+.logout:hover{
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
+.Header_avatar:hover .user_infor {
+    display: block;
+}
+
+
 .Header_text{
 font-weight: bold;
 color: white;
