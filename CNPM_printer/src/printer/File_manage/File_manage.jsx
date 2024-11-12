@@ -1,4 +1,6 @@
 import './File_manage.css'
+import React, { useRef, useState } from 'react';
+import Add_button from '../assets/add_button.svg'
 
 
 function TableLoadedFile() {
@@ -41,17 +43,33 @@ function TableLoadedFile() {
         ));
     }
 
+    //--------scrip add file from clien-------------//
+    const fileInputRef = useRef(null);
+
+    const handleButtonClick = () => {
+      fileInputRef.current.click();
+    };
+  
+    const handleFileChange = (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        console.log("Selected file:", file);
+      }
+    };
+    //<------------------------------------------>//
+
     return (
         <>
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className='add_button'>
-                <rect width="80" height="80" fill="white" />
-                <path opacity="0.8" d="M10 30C10 20.5719 10 15.8579 12.9289 12.9289C15.8579 10 20.5719 10 30 
-                10H50C59.4281 10 64.1421 10 67.0711 12.9289C70 15.8579 70 20.5719 70 30V50C70 59.4281 70 64.1421
-                 67.0711 67.0711C64.1421 70 59.4281 70 50 70H30C20.5719 70 15.8579 70 12.9289 67.0711C10 64.1421 
-                 10 59.4281 10 50V30Z" fill="#1488DB" />
-                <path d="M40 26.667L40 53.3337" stroke="white" strokeWidth="5" strokeLinejoin="round" />
-                <path d="M53.3333 40L26.6666 40" stroke="white" strokeWidth="5" strokeLinejoin="round" />
-            </svg>
+            <div onClick={handleButtonClick} className="add_button" >
+                <img src={Add_button} alt="button" />
+                
+      <input
+        type="file"
+        ref={fileInputRef}
+        style={{ display: 'none' }}
+        onChange={handleFileChange}
+      />
+    </div>
 
             <div className="box-contain-table">
                 <table className="contain_loaded_file">

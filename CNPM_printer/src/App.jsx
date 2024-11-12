@@ -16,14 +16,20 @@ import SPSO_PrinterManage from './SPSO/PrinterManage/printer.jsx'
 import SPSO_Report from './SPSO/Report/SummaryReport.jsx'
 import SPSO_HistoryPrint from './SPSO/PrintHistory/ManagePrinted.jsx'
 
-
-
-
+import Test from './uploadtest.jsx'
 
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 function App() {
   return (
+
+
+    
+  
+   
+   
+
+
     <>
       <Router>
       <Printer_Header />
