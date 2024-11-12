@@ -27,6 +27,9 @@ function Header() {
                     </div>
                     <div className={style.Header_avatar}>
                         <img src={avatar} alt="avatar" style={{width:"60px", height:"60px", borderRadius:"50px", border:"1px solid white"}} />
+                        <div className={style.user_infor}>
+                            this is a dropdown
+                        </div>
                     </div>
                     <div className={style.Header_text}>
                         Số dư:
