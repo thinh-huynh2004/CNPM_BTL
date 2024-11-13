@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 import style from  './Header.module.css'
 import Component1 from '../assets/logo.svg'
 import Bell from '../assets/Bell.svg'
@@ -9,6 +12,24 @@ import { Link } from 'react-router-dom';
 
 
 function Header() {
+    const [userData, setUserData] = useState({ id: null, name: 'Loading...', email: 'Loading...', credit: 0});
+  useEffect(() => {
+    // Fetch data 
+    axios.get('./userData.json')  
+      .then((response) => {
+        setUserData(response.data); 
+      })
+      .catch((error) => {
+        console.error('Error fetching user data:', error); 
+      }); 
+  }, []);
+  const formattedCredit = new Intl.NumberFormat().format(userData.credit);
+
+
+console.log({userData});
+
+
+
     return (
         
         <header className={style.header}>
@@ -29,8 +50,8 @@ function Header() {
                     <div className={style.Header_avatar}>
                         <img src={avatar} alt="avatar" style={{width:"60px", height:"60px", borderRadius:"50px", border:"1px solid white"}} />
                         <div className={style.user_infor}>
-                            <p className={style.user_inf}>email.example.hcmut.edu.vn</p>
-                            <p className={style.user_inf} style={{marginBottom:"6px"}}>Nguyễn Thị Văn Tên</p>
+                            <p className={style.user_inf}>{userData.email}</p>
+                            <p className={style.user_inf} style={{marginBottom:"6px"}}>{userData.name}</p>
                             <div className={style.infor_line}></div>
                             <div className={style.logout}>
                                 <p style={{fontSize:"16px", fontWeight:"700", color:"#032B91"}}>Đăng xuất</p>
@@ -42,7 +63,7 @@ function Header() {
                         Số dư:
                     </div>
                     <div className={style.Header_cast}>
-                        <p className={style.Cast_content}>99.000</p>
+                        <p className={style.Cast_content}>{formattedCredit}</p>
                         <img src={rectangle} alt="r" className={style.Cast_option} />
                     </div>
                 </div>
