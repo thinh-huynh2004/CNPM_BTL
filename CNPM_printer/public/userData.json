@@ -1,0 +1,7 @@
+{
+  "ID": 111,
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "credit": 99000,
+  "userType": "admin"
+}
