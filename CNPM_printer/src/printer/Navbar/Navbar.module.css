@@ -43,13 +43,13 @@
 
 
   .text{
-margin-top: 296px;
+
 text-align: center;
 color: white;
 font-size: 28px;
 font-weight: 700;
 
   }
-  a{
-    text-decoration: none; /* Disable underline */
-  }
+/* a{
+    text-decoration: none; 
+  } */
