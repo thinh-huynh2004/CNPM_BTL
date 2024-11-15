@@ -59,14 +59,14 @@ function Login() {
                                 <hr className={style.line} />
                                 <div className={style.mail_grap}>
                                     <p className={style.norm_text} > Email</p>
-                                    <input className={style.input}
+                                    <input className={style.inputt}
                                         type="text"
                                         value={username}
                                         onChange={(e) => setUsername(e.target.value)} />
                                 </div>
                                 <div className={style.pass_grap}>
                                     <p className={style.norm_text} > Password</p>
-                                    <input className={style.input}
+                                    <input className={style.inputt}
                                         type="text"
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)} />

@@ -28,7 +28,7 @@ function App() {
       <SPSO_Header />
       
       <Routes>
-        <Route path="/" element={<Printer_Menu />} />
+        <Route path="/" element={<SPSO_Menu />} />
         <Route path="/PfileManage" element={<><Printer_Navbar /><Printer_File_manage /></>} />
         <Route path="/Ppayment" element={<><Printer_Navbar /><Printer_Money /><Printer_History_pay/> </>} />
         <Route path="/Pprint" element={<><Printer_Navbar /><Printer_PrintInterface /></>} />
