@@ -67,14 +67,20 @@
 .Box-of-condition {
     height: 30px;
     width: 130px;
-    border: 1px solid #74726e;
     border-radius: 3px;
     margin: 10px 0;
     margin-left: 20px;
-    padding-left: 10px;
     position: relative;
     line-height: 30px;
     font-size: 16px;
+}
+
+.boxCondition-select {
+    width: 130px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    border-radius: 3px;
 }
 
 .condition_to_exchange li {

@@ -109,7 +109,7 @@
     top: 50%;
     transform: translateY(-50%);
 }
-.tableOfPrinter, .tableOfPrinter thead, .tableOfPrinter_body,
+.tableOfPrinter, .tableOfPrinter_head, .tableOfPrinter_body,
 .tableOfPrinter_row, .tableOfPrinter_row td {
     padding: 0;
     margin: 0;
@@ -125,7 +125,7 @@
     overflow-y: auto;
     background-color: #f7f7f7;
 }
-.tableOfPrinter thead {
+.tableOfPrinter .tableOfPrinter_head {
     height: 60px;
 }
 .tableOfPrinter_body {
@@ -148,7 +148,7 @@
     align-items: center;
     position: relative;
 }
-.tableOfPrinter_row td {
+.tableOfPrinter_body .tableOfPrinter_row td {
     flex: 1;
     justify-content: center;
     align-items: center;
@@ -223,15 +223,16 @@
     z-index: 2;
     width: 100px;
 }
-.tableOfPrinter__subBox_list li {
+.tableOfPrinter__subBox_list .tableOfPrinter-li {
     display: flex;
-    padding: 5px 10px;
+    padding: 0px 10px;
     font-size: 16px;
-    line-height: 20px;
-    height: 20px;
+    line-height: 30px;
+    height: 30px;
     z-index: 2;
+    box-sizing: border-box;
 }
-.tableOfPrinter__subBox_list li:hover {
+.tableOfPrinter__subBox_list .tableOfPrinter-li:hover {
     background-color: #7ac7ff;
     cursor: pointer;
     transition: all 0.2s;

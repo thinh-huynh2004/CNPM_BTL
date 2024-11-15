@@ -27,85 +27,99 @@ function DocumentList() {
     <div className="container">
       <div className="header-filters">
         <div className="header">
-          <h2>Tổng: {totalDocuments}</h2> {/* Hiển thị tổng số tài liệu động */}
+          <h2 className='header-h2'>Tổng: {totalDocuments}</h2> {/* Hiển thị tổng số tài liệu động */}
         </div>
         <div className="filters">
           <div className="filter-group date-group">
             <div className="input-container">
-              <label htmlFor="date">Ngày in</label>
-              <input type="date" id="date" />
+              <label className='input-label' htmlFor="date">Ngày in</label>
+              <input className='input' type="date" id="date" />
               <span>-</span>
               <input type="date" id="date-end" />
             </div>
             <div className="checkbox-container">
-              <input type="checkbox" id="all-date" />
-              <label htmlFor="all-date">Tất cả</label>
+              <input className='input' type="checkbox" id="all-date" />
+              <label className='input-label' htmlFor="all-date">Tất cả</label>
             </div>
           </div>
           <div className="filter-group mssv-group">
             <div className="input-container">
-              <label htmlFor="mssv">MSSV</label>
-              <input type="text" id="mssv" />
+              <label className='input-label' htmlFor="mssv">MSSV</label>
+              <input className='input' type="text" id="mssv" />
             </div>
             <div className="checkbox-container">
-              <input type="checkbox" id="all-mssv" />
-              <label htmlFor="all-mssv">Tất cả</label>
+              <input className='input' type="checkbox" id="all-mssv" />
+              <label className='input-label' htmlFor="all-mssv">Tất cả</label>
             </div>
           </div>
           <div className="filter-group paper-size-group">
             <div className="input-container">
-              <label htmlFor="paper-size">Khổ giấy</label>
+              <label className='input-label' htmlFor="paper-size">Khổ giấy</label>
               <select id="paper-size">
-                <option>Chọn</option>
-                <option>A0</option>
-                <option>A1</option>
-                <option>A2</option>
-                <option>A3</option>
-                <option>A4</option>
-                <option>A5</option>
+                <option className='option'>Chọn</option>
+                <option className='option'>A0</option>
+                <option className='option'>A1</option>
+                <option className='option'>A2</option>
+                <option className='option'>A3</option>
+                <option className='option'>A4</option>
+                <option className='option'>A5</option>
               </select>
             </div>
             <div className="checkbox-container">
-              <input type="checkbox" id="all-paper" />
-              <label htmlFor="all-paper">Tất cả</label>
+              <input className='input' type="checkbox" id="all-paper" />
+              <label className='input-label' htmlFor="all-paper">Tất cả</label>
             </div>
           </div>
           <div className="filter-group printer-group">
             <div className="input-container">
-              <label htmlFor="printer">Máy in</label>
-              <input type="text" id="printer" />
+              <label className='input-label' htmlFor="printer">Máy in</label>
+              <input className='input' type="text" id="printer" />
             </div>
             <div className="checkbox-container">
-              <input type="checkbox" id="all-printer" />
-              <label htmlFor="all-printer">Tất cả</label>
+              <input className='input' type="checkbox" id="all-printer" />
+              <label className='input-label' htmlFor="all-printer">Tất cả</label>
             </div>
           </div>
           <button className="filter-button">Lọc</button>
         </div>
       </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>STT</th>
-            <th>Tên tài liệu</th>
-            <th>Định dạng</th>
-            <th>Ngày in</th>
-            <th>Số trang</th>
-            <th>Khổ giấy</th>
-            <th>Mặt/tờ</th>
+      <table className='list-table'>
+        <thead className='list-table-head'>
+          <tr className='list-table-row'>
+            <th className='list-table-cl-h'>STT</th>
+            <th className='list-table-cl-h'>Tên tài liệu</th>
+            <th className='list-table-cl-h'>Định dạng</th>
+            <th className='list-table-cl-h'>Ngày in</th>
+            <th className='list-table-cl-h'>Số trang</th>
+            <th className='list-table-cl-h'>Khổ giấy</th>
+            <th className='list-table-cl-h'>Mặt/tờ</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='list-table-body'>
           {documentData.map((doc, index) => (
-            <tr key={doc.id}>
-              <td><p>{index + 1}</p></td>
-              <td><p>{doc.name}</p></td>
-              <td><p>{doc.format}</p></td>
-              <td><p>{doc.date}</p></td>
-              <td><p>{doc.pages}</p></td>
-              <td><p>{doc.size}</p></td>
-              <td><p>{doc.sides}</p></td>
+            <tr className='list-table-row' key={doc.id}>
+              <td className='list-table-cl'>
+                <p className='list-table-p'>
+                  {index + 1}</p></td>
+              <td className='list-table-cl'>
+                <p className='list-table-p'>
+                  {doc.name}</p></td>
+              <td className='list-table-cl'>
+                <p className='list-table-p'>
+                  {doc.format}</p></td>
+              <td className='list-table-cl'>
+                <p className='list-table-p'>
+                  {doc.date}</p></td>
+              <td className='list-table-cl'>
+                <p className='list-table-p'>
+                  {doc.pages}</p></td>
+              <td className='list-table-cl'>
+                <p className='list-table-p'>
+                  {doc.size}</p></td>
+              <td className='list-table-cl'>
+                <p className='list-table-p'>
+                  {doc.sides}</p></td>
             </tr>
           ))}
         </tbody>

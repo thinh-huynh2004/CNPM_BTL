@@ -31,8 +31,8 @@ function Dashboard() {
           <h3 className="section-title">Lọc theo</h3>
           <form className="filter-form">
             <div className="form-group">
-              <label htmlFor="month">Tháng</label>
-              <select id="month">
+              <label className='report-label' htmlFor="month">Tháng</label>
+              <select className="month">
                 <option value="all">Tất cả</option>
                 {[...Array(12).keys()].map((month) => (
                   <option key={month + 1} value={month + 1}>
@@ -42,10 +42,10 @@ function Dashboard() {
               </select>
             </div>
             <div className="form-group">
-              <label htmlFor="year">Năm</label>
+              <label className='report-label' htmlFor="year">Năm</label>
               <input type="number" id="year" placeholder="YYYY" />
             </div>
-            <button type="submit">Áp dụng</button>
+            <button className='form-group-button' type="submit">Áp dụng</button>
           </form>
         </div>
 
@@ -59,7 +59,7 @@ function Dashboard() {
       </div>
 
       <div className="printing-section">
-        <h2>In ấn</h2>
+        <h2 className='report-h2'>In ấn</h2>
         <div className="chart-bar-container">
           <div className="chart-bar">
             {printingData.map((data, index) => (
@@ -80,7 +80,7 @@ function Dashboard() {
       </div>
 
       <div className="access-section">
-        <h2>Truy cập</h2>
+        <h2 className='report-h2'>Truy cập</h2>
         <div className="chart-access-container">
           <div className="chart-access">
             {accessData.map((value, index) => (
@@ -91,7 +91,7 @@ function Dashboard() {
           </div>
           <div className="chart-labels">
             {['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12'].map((label, index) => (
-              <span key={index}>{label}</span>
+              <span className='chart-labels-span' key={index}>{label}</span>
             ))}
           </div>
           <p className="total-access">Biểu đồ lượng truy cập theo tháng năm 2024</p>

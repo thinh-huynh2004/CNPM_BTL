@@ -19,7 +19,7 @@ const documentData = [
 const Print_control_panel = () => {
     return (
         <div className="contain_container">
-        <div className="container">
+        <div className="Interface_container">
             <div className="item item_L">
                 <h2 className="choose-material">Chọn tài liệu đã tải lên</h2>
                 <div className="table_contain">
@@ -27,8 +27,8 @@ const Print_control_panel = () => {
                     <tbody>
                         {documentData.map((doc, index) => (
                             <tr key={index}>
-                                <td>{doc}</td>
-                                <td><input type="checkbox" /></td>
+                                <td className='documentTable-td'>{doc}</td>
+                                <td className='documentTable-td'><input type="checkbox" /></td>
                             </tr>
                         ))}
                     </tbody>
@@ -42,18 +42,18 @@ const Print_control_panel = () => {
                 </div>
                 <div className="content">
                     <div className="left-panel">
-                        <label htmlFor="printer">Máy in</label>
-                        <select id="printer">
+                        <label className='left-panel-label' htmlFor="printer">Máy in</label>
+                        <select className='left-panel-select' id="printer">
                             <option value="">Chọn máy in</option>
                         </select>
                         
-                        <label htmlFor="pages">Trang</label>
-                        <select id="pages">
+                        <label className='left-panel-label' htmlFor="pages">Trang</label>
+                        <select className='left-panel-select' id="pages">
                             <option value="">Chọn trang</option>
                         </select>
 
-                        <label htmlFor="paper-size">Khổ giấy</label>
-                        <select id="paper-size">
+                        <label className='left-panel-label' htmlFor="paper-size">Khổ giấy</label>
+                        <select className='left-panel-select' id="paper-size">
                             <option value="">Chọn khổ giấy</option>
                         </select>
                     </div>
@@ -61,21 +61,21 @@ const Print_control_panel = () => {
                     <div className="divider"></div>
 
                     <div className="right-panel">
-                        <label htmlFor="pages-per-sheet">Số trang mỗi tờ</label>
-                        <select id="pages-per-sheet">
+                        <label className='left-panel-label' htmlFor="pages-per-sheet">Số trang mỗi tờ</label>
+                        <select className='left-panel-select' id="pages-per-sheet">
                             <option value="">Chọn số trang mỗi tờ</option>
                         </select>
 
-                        <label htmlFor="scale">Tỷ lệ</label>
+                        <label className='left-panel-label' htmlFor="scale">Tỷ lệ</label>
                         <input type="text" id="scale" />
 
-                        <label htmlFor="margin">Lề</label>
+                        <label className='left-panel-label' htmlFor="margin">Lề</label>
                         <input type="text" id="margin" />
                     </div>
                 </div>
 
                 <div className="footer">
-                    <p><span className="warning-icon">⚠️</span> Số giấy cần in nhiều hơn số giấy hiện có <br />    Vui lòng mua đủ giấy trước khi in</p>
+                    <p className='interfaceFoot-p'><span className="warning-icon">⚠️</span> Số giấy cần in nhiều hơn số giấy hiện có <br />    Vui lòng mua đủ giấy trước khi in</p>
                     <button className="print-button" onClick={() => alert("Đang thực hiện in. Vui lòng chờ...")}>in</button>
                 </div>
             </div>

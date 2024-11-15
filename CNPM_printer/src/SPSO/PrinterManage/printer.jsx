@@ -115,7 +115,7 @@ function ManagePrinter() {
                     </div>
                 </div>
                 <table className="tableOfPrinter">
-                    <thead></thead>
+                    <thead className='tableOfPrinter_head'></thead>
                     <tbody className='tableOfPrinter_body'>
                         <tr className="tableOfPrinter_row">
                             <td className='tableOfPrinter_cl1'>
@@ -134,12 +134,14 @@ function ManagePrinter() {
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl1' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
                                                 <li onClick={handleShowDetail} 
-                                                    className="showDetailButton">
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>
@@ -161,12 +163,15 @@ function ManagePrinter() {
                                         </svg>
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl2' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
-                                                <li onClick={handleShowDetail} className="showDetailButton">
+                                                <li onClick={handleShowDetail} 
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>
@@ -188,12 +193,15 @@ function ManagePrinter() {
                                         </svg>
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl3' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
-                                                <li onClick={handleShowDetail} className="showDetailButton">
+                                                <li onClick={handleShowDetail} 
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>
@@ -215,12 +223,15 @@ function ManagePrinter() {
                                         </svg>
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl4' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
-                                                <li onClick={handleShowDetail} className="showDetailButton">
+                                                <li onClick={handleShowDetail} 
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>
@@ -242,12 +253,15 @@ function ManagePrinter() {
                                         </svg>
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl5' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
-                                                <li onClick={handleShowDetail} className="showDetailButton">
+                                                <li onClick={handleShowDetail} 
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>
@@ -271,12 +285,15 @@ function ManagePrinter() {
                                         </svg>
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl6' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
-                                                <li onClick={handleShowDetail} className="showDetailButton">
+                                                <li onClick={handleShowDetail} 
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>
@@ -298,12 +315,15 @@ function ManagePrinter() {
                                         </svg>
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl7' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
-                                                <li onClick={handleShowDetail} className="showDetailButton">
+                                                <li onClick={handleShowDetail} 
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>
@@ -325,12 +345,15 @@ function ManagePrinter() {
                                         </svg>
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl8' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
-                                                <li onClick={handleShowDetail} className="showDetailButton">
+                                                <li onClick={handleShowDetail} 
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>
@@ -352,12 +375,15 @@ function ManagePrinter() {
                                         </svg>
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl9' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
-                                                <li onClick={handleShowDetail} className="showDetailButton">
+                                                <li onClick={handleShowDetail} 
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>
@@ -379,12 +405,15 @@ function ManagePrinter() {
                                         </svg>
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl10' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
-                                                <li onClick={handleShowDetail} className="showDetailButton">
+                                                <li onClick={handleShowDetail} 
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>
@@ -408,12 +437,15 @@ function ManagePrinter() {
                                         </svg>
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl11' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
-                                                <li onClick={handleShowDetail} className="showDetailButton">
+                                                <li onClick={handleShowDetail} 
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>
@@ -435,12 +467,15 @@ function ManagePrinter() {
                                         </svg>
                                         <div className={`tableOfPrinter__subBox_option ${visibleOption === 'cl12' ? 'show' : ''}`}>
                                             <ul className='tableOfPrinter__subBox_list'>
-                                                <li onClick={handleShowDetail} className="showDetailButton">
+                                                <li onClick={handleShowDetail} 
+                                                    className="showDetailButton tableOfPrinter-li">
                                                     Chi tiết
                                                 </li>
-                                                <li onClick={handleChangeClick}>
+                                                <li onClick={handleChangeClick}
+                                                    className='tableOfPrinter-li'>
                                                     Chỉnh sửa</li>
-                                                <li onClick={handleDeletedClick}>
+                                                <li onClick={handleDeletedClick}
+                                                    className='tableOfPrinter-li'>
                                                     Xóa</li>
                                             </ul>
                                         </div>

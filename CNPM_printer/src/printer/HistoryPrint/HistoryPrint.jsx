@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './HistoryPrint.module.css';
+import './HistoryPrint.module.css';
 const data = [
     { STT: 1, tenTaiLieu: "Capstone_Project_Autumn_2023", dinhDang: "PDF", ngayIn: "30/9/2024 - 18:38", soTrang: 5, khoGiay: "A4", matTo: 2 },
     { STT: 2, tenTaiLieu: "Capstone_Project_Autumn_2024", dinhDang: "PNG", ngayIn: "03/11/2024 - 10:10", soTrang: 12, khoGiay: "A5", matTo: 1 },
@@ -17,32 +17,39 @@ const data = [
 
 const History_print = () => {
     return (
-        <div className={styles.container}>
-            <table className={styles.table}>
-                <thead>
-                    <tr>
-                        <td colSpan="7" className={styles.totalCount}>Tổng: {data.length}</td>
+        <div className='container'>
+            <table className='printHis-table'>
+                <thead className='printHis-table-head'>
+                    <tr className='printHis-table-row'>
+                        <td colSpan="7" className='totalCount'>Tổng: {data.length}</td>
                     </tr>
-                    <tr>
-                        <th>STT</th>
-                        <th>Tên tài liệu</th>
-                        <th>Định dạng</th>
-                        <th>Ngày in</th>
-                        <th>Số trang</th>
-                        <th>Khổ giấy</th>
-                        <th>Mặt/tờ</th>
+                    <tr className='printHis-table-row'>
+                        <th className='printHis-table-th'>STT</th>
+                        <th className='printHis-table-th'>Tên tài liệu</th>
+                        <th className='printHis-table-th'>Định dạng</th>
+                        <th className='printHis-table-th'>Ngày in</th>
+                        <th className='printHis-table-th'>Số trang</th>
+                        <th className='printHis-table-th'>Khổ giấy</th>
+                        <th className='printHis-table-th'>Mặt/tờ</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='printHis-table-body'>
                     {data.map((item, index) => (
-                        <tr key={index}>
-                            <td>{index + 1}</td>
-                            <td>{item.tenTaiLieu}</td>
-                            <td>{item.dinhDang}</td>
-                            <td>{item.ngayIn}</td>
-                            <td>{item.soTrang}</td>
-                            <td>{item.khoGiay}</td>
-                            <td>{item.matTo}</td>
+                        <tr className='printHis-table-row' key={index}>
+                            <td className='printHis-table-td'>
+                                {index + 1}</td>
+                            <td className='printHis-table-td'>
+                                {item.tenTaiLieu}</td>
+                            <td className='printHis-table-td'>
+                                {item.dinhDang}</td>
+                            <td className='printHis-table-td'>
+                                {item.ngayIn}</td>
+                            <td className='printHis-table-td'>
+                                {item.soTrang}</td>
+                            <td className='printHis-table-td'>
+                                {item.khoGiay}</td>
+                            <td className='printHis-table-td'>
+                                {item.matTo}</td>
                         </tr>
                     ))}
                 </tbody>

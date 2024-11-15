@@ -44,25 +44,14 @@ function BoxContain() {
                                 <div className="contain_p">
                                     <p>Loại giấy</p>
                                 </div>
-                                <div className='Box-of-condition'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" 
-                                        viewBox="0 0 320 512" 
-                                        className={`box-of-condition-more ${isOpen ? 'rotate-icon' : ''}`} 
-                                        onClick={toggleDropdown}>
-                                        <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/>
-                                    </svg>
-                                    {isOpen && (
-                                        <div className="type_of_paper" onClick={toggleDropdown}>
-                                            <span>{selectedPaperType}</span>
-                                            <ul className="list__type_of_paper">
-                                                <li onClick={() => handleItemClick('A0')}>A0</li>
-                                                <li onClick={() => handleItemClick('A1')}>A1</li>
-                                                <li onClick={() => handleItemClick('A2')}>A2</li>
-                                                <li onClick={() => handleItemClick('A3')}>A3</li>
-                                                <li onClick={() => handleItemClick('A4')}>A4</li>
-                                            </ul>
-                                        </div>
-                                    )}
+                                <div className="Box-of-condition">
+                                    <select className='boxCondition-select' id="">
+                                        <option className="boxCondition-option">A0</option>
+                                        <option className="boxCondition-option">A1</option>
+                                        <option className="boxCondition-option">A2</option>
+                                        <option className="boxCondition-option">A3</option>
+                                        <option className="boxCondition-option">A4</option>
+                                    </select>
                                 </div>
                             </li>
                             <li>
@@ -70,9 +59,13 @@ function BoxContain() {
                                     <p>Đổi sang</p>
                                 </div>
                                 <div className="Box-of-condition">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='box-of-condition-more'>
-                                        <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/>
-                                    </svg>
+                                    <select className='boxCondition-select' id="">
+                                        <option className="boxCondition-option">A0</option>
+                                        <option className="boxCondition-option">A1</option>
+                                        <option className="boxCondition-option">A2</option>
+                                        <option className="boxCondition-option">A3</option>
+                                        <option className="boxCondition-option">A4</option>
+                                    </select>
                                 </div>
                             </li>
                         </ul>
@@ -100,24 +93,13 @@ function BoxContain() {
                                     <p>Loại giấy</p>
                                 </div>
                                 <div className="Box-of-condition">
-                                    <svg xmlns="http://www.w3.org/2000/svg" 
-                                        viewBox="0 0 320 512" 
-                                        className={`box-of-condition-more ${isOpen ? 'rotate-icon' : ''}`} 
-                                        onClick={toggleDropdown}>
-                                        <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/>
-                                    </svg>
-                                    {isOpen && (
-                                        <div className="type_of_paper" onClick={toggleDropdown}>
-                                            <span>{selectedPaperType}</span>
-                                            <ul className="list__type_of_paper">
-                                                <li onClick={() => handleItemClick('A0')}>A0</li>
-                                                <li onClick={() => handleItemClick('A1')}>A1</li>
-                                                <li onClick={() => handleItemClick('A2')}>A2</li>
-                                                <li onClick={() => handleItemClick('A3')}>A3</li>
-                                                <li onClick={() => handleItemClick('A4')}>A4</li>
-                                            </ul>
-                                        </div>
-                                    )}
+                                    <select className='boxCondition-select' id="">
+                                        <option className="boxCondition-option">A0</option>
+                                        <option className="boxCondition-option">A1</option>
+                                        <option className="boxCondition-option">A2</option>
+                                        <option className="boxCondition-option">A3</option>
+                                        <option className="boxCondition-option">A4</option>
+                                    </select>
                                 </div>
                             </li>
                         </ul>
@@ -166,7 +148,6 @@ function BoxContain() {
                     </div>
                 </div>
             </div>
-            <BoxContainHistoryPay></BoxContainHistoryPay>
         </div>
     );
 }
