@@ -2,6 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common'
 import { ApiBody, ApiOperation, ApiParam, ApiTags } from '@nestjs/swagger'
 import { StudentsService } from './students.service'
 import { CreateStudentDTO } from './dto/create-user.dto'
+import { GoogleAuthDTO } from './dto/google-auth.dto'
 
 @ApiTags('STUDENTS')
 @Controller('api/students')
@@ -48,6 +49,16 @@ export class StudentsController {
   }
 
   @ApiOperation({
+    summary: 'Get student by google token',
+    description: 'Get student by google token.',
+  })
+  @ApiBody({ type: GoogleAuthDTO })
+  @Post('google-auth')
+  async getStudentByGoogleToken(@Body() { token }: GoogleAuthDTO) {
+    return this.studentsService.getStudentByGoogleToken(token)
+  }
+
+  @ApiOperation({
     summary: 'Create student',
     description: 'Create student.',
   })
@@ -56,4 +67,6 @@ export class StudentsController {
   async createUser(@Body() user: CreateStudentDTO) {
     return this.studentsService.create(user)
   }
+
+  
 }

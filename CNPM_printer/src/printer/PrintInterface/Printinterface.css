@@ -16,13 +16,13 @@
 .choose-material {
     color: #1f3d7a;
     text-align: center;
-    margin: 10px 0px;
     padding-bottom: 10px;
     border-bottom: 2px solid #1f3d7a;
 }
 
 .item:first-child {
     width: 30%;
+    margin: 0 auto;
 
     /* min-width: 40vw; */
     /* min-height: 50vh; */
@@ -34,10 +34,10 @@
 }
 
 .document-table {
-    width: 98%;
+    width: 100%;
     border-collapse: collapse;
-    margin: 0px 10px;
-    height: 50vh;
+    height: fit-content;
+    max-height: 50vh;
     overflow-y: auto;  
     overflow-x: hidden;     
     display: inline-block; 
@@ -73,15 +73,11 @@
 .document-table  {
     border: none;
     box-shadow: none;
-    padding: 8px;
 }
 
 
 /* --------------------------------- */
 .item:last-child {
-    min-width: 40vw;
-    max-width: 40vw;
-    min-height: 45vh;
     /* align-self: flex-end; */
     border: 2px solid #1f3d7a;
     border-top-right-radius: 10px;

@@ -45,4 +45,7 @@ export class File {
 
   @OneToMany(() => PrinterFile, (printerFile) => printerFile.file)
   printerFiles: PrinterFile[]
+
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  createdAt: Date
 }

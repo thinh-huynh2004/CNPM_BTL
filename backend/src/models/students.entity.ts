@@ -17,6 +17,9 @@ export class Student {
   @Column({default: 0})
   balance: number;
 
+  @Column({ length: 50 })
+  email: string;
+
   @OneToMany(() => File, file => file.student)
   files: File[];
 

@@ -1,6 +1,11 @@
 import { ApiProperty } from '@nestjs/swagger'
-import { IsNotEmpty } from 'class-validator'
-import { Orientation, PageSize, PrintSide, PrintType } from 'src/models/enums/index.enum'
+import { IsNotEmpty, IsOptional } from 'class-validator'
+import {
+  Orientation,
+  PageSize,
+  PrintSide,
+  PrintType,
+} from 'src/models/enums/index.enum'
 
 export class CreatePrinterFileDTO {
   @ApiProperty({ type: 'number' })
@@ -42,4 +47,8 @@ export class CreatePrinterFileDTO {
   @ApiProperty({ type: 'number' })
   @IsNotEmpty()
   printerId: number
+
+  @ApiProperty({ type: [Number] })
+  @IsOptional()
+  customPageRanges?: number[]
 }

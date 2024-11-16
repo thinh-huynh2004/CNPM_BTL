@@ -9,4 +9,8 @@ export class CreateStudentDTO {
   @ApiProperty({ type: 'string' })
   @IsNotEmpty()
   lastName: string
+
+  @ApiProperty({ type: 'string' })
+  @IsNotEmpty()
+  email: string
 }

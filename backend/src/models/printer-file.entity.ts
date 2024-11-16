@@ -76,4 +76,8 @@ export class PrinterFile {
     default: PrinterFileStatus.QUEUE,
   })
   status: PrinterFileStatus
+
+  @Column("int", { array: true, nullable: true })
+  customPageRanges: number[]
+
 }

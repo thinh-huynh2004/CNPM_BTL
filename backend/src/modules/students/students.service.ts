@@ -5,6 +5,8 @@ import { StudentsRepositoryInterface } from './interfaces/students.interface'
 import { DataSource, DeepPartial } from 'typeorm'
 import { FilesService } from '../files/files.service'
 import { File } from 'src/models/files.entity'
+import { GoogleAuthService } from '../google-auth/google-auth.service'
+import { CreateStudentDTO } from './dto/create-user.dto'
 
 @Injectable()
 export class StudentsService extends BaseServiceAbstract<Student> {
@@ -13,6 +15,7 @@ export class StudentsService extends BaseServiceAbstract<Student> {
     private readonly students_repository: StudentsRepositoryInterface,
     private readonly filesService: FilesService,
     private readonly dataSource: DataSource,
+    private readonly googleAuthService: GoogleAuthService,
   ) {
     super(students_repository)
   }
@@ -23,11 +26,35 @@ export class StudentsService extends BaseServiceAbstract<Student> {
 
   async getStudentPrinterHistory(studentId: number) {
     return this.dataSource
-    .createQueryBuilder()
-    .select(['file.studentId', 'file.id', 'file.name']) // Use array format for multiple fields
-    .from(File, 'file')
-    .where('file.studentId = :studentId', { studentId })
-    .innerJoinAndSelect('file.printerFiles', 'printerFile') // Join File with PrinterFile
-    .getMany();
+      .createQueryBuilder()
+      .select(['file.studentId', 'file.id', 'file.name','file.fileType']) // Use array format for multiple fields
+      .from(File, 'file')
+      .where('file.studentId = :studentId', { studentId })
+      .innerJoinAndSelect('file.printerFiles', 'printerFile') // Join File with PrinterFile
+      .getMany()
+  }
+
+  async getStudentByGoogleToken(token: string) {
+    const payload = await this.googleAuthService.verifyToken(token)
+    const firstName = payload.given_name
+    const lastName = payload.family_name
+    const email = payload.email
+
+    console.log('payload', payload)
+
+    const student = await this.students_repository.findOne({ where: { email } })
+
+
+    if (student) {
+      return student
+    }
+
+    const studentDTO = new CreateStudentDTO()
+    
+    studentDTO.firstName = firstName
+    studentDTO.lastName = lastName
+    studentDTO.email = email
+
+    return await this.students_repository.save(studentDTO)
   }
 }
